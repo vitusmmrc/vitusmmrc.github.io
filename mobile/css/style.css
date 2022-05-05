@@ -1,0 +1,330 @@
+@import url('https://vitorsammarco.github.io/league-of-legends-css-styles/css/fonts/fonts.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    /* colors */
+    --white-0: #FFFFFF;
+    --white-1: #ebebeb;
+    --white-2: #eeeeee;
+    --white-3: #f9f9f9;
+    --white-4: #b8b8b8;
+    --black-0: #000000;
+    --black-1: #0a0a0a;
+    --black-2: #141213;
+    --black-3: #1f1f1f;
+    --black-4: #252423;
+    --grey-1: #656462;
+    --grey-2: #8a8887;
+    --blue-input: #00ddff;
+    --red: #d1363a;
+    --white-background: var(--white-1);
+    --black-background: var(--black-2);
+    --text-color: var(--black-1);
+    --highlight-dark: #80808033;
+    --highlight-white: #adacaa33;
+    --font-primary: 'FF Mark W05';
+    --soft: cubic-bezier(0, 0, 0, 1);
+    --soft-stern: cubic-bezier(.2, .9, 0, 1);
+    --stern: cubic-bezier(1, 0, 1, 1);
+
+}
+
+body {
+    background-color: var(--black-background);
+    color: var(--white-3);
+    font-family: var(--font-primary);
+    min-width: 269px;
+}
+
+.seo {
+    color: transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    user-select: none;
+    pointer-events: none;
+    visibility: hidden;
+    display: none;
+}
+
+header#menu {
+    background-color: var(--black-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 44px;
+    padding-bottom: 8px;
+}
+
+header#menu h2 {
+    text-transform: unset;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#main-banner {
+    position: fixed;
+    width: 100%;
+    height: 266px;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+#main-banner video {
+    height: 150% !important;
+}
+
+.main {
+    position: absolute;
+    background-color: var(--black-2);
+    z-index: 1;
+    top: 266px;
+    width: 100%;
+    box-shadow: 0 -50px 60px 20px var(--black-2);
+}
+
+#main-banner video {
+    width: auto;
+    height: 120%;
+}
+
+.profile-container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0px 16px;
+    margin-top: 30px;
+}
+
+.profile {
+    position: absolute;
+    top: -90px;
+    width: 100%;
+    background: var(--black-background);
+    height: 90px;
+    border-radius: 3px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+.profile img {
+    height: 95%;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.profile h2 {
+    font-family: var(--font-primary);
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--white-4);
+    font-size: 12px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+
+}
+
+.desc h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white-1);
+}
+
+.desc p {
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: var(--white-4);
+    color: var(--grey-2);
+}
+
+.desc hr {
+    border: none;
+    margin: 14px auto;
+    height: 1px;
+    background: var(--highlight-dark);
+    width: 100%;
+}
+
+.social-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+}
+
+.social-links a, .social-links img {
+    height: 24px;
+}
+
+.social-links img {
+    filter: brightness(2);
+}
+
+.desc h4 {
+    margin-bottom: 12px;
+}
+
+.mastery-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.mastery-champ {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white-4);
+}
+
+.mastery-champ img {
+    width: 66%;
+    margin-bottom: 8px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 8px;
+}
+
+input::placeholder {
+    color: transparent;
+    user-select: none;
+}
+
+input {
+    width: 100%;
+    color: var(--white-1);
+    border: none;
+    background: none;
+    height: 60px;
+    padding: 0 16px;
+    transition: 1s all var(--soft);
+    padding-top: 8px;
+    border-radius: 3px;
+    background-color: var(--black-3);
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--font-primary);
+    letter-spacing: 0.5px;
+}
+
+label {
+    position: absolute;
+    color: var(--grey-1);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    top: 20px;
+    left: 16px;
+    user-select: none;
+    cursor: text;
+    transition: 0.5s all var(--soft-stern);
+}
+
+input:focus~label {
+    transition: 0.5s all var(--soft-stern);
+    color: var(--grey-2);
+    font-size: 10px;
+    letter-spacing: 1px;
+    top: 6px;
+    left: 16px;
+}
+
+input:focus, #message:focus {
+    outline: 1px solid var(--blue-input);
+    box-shadow: 0 0 25px -10px inset var(--blue-input);
+}
+
+
+input.error, #message.error {
+    outline: 1px solid red;
+    box-shadow: 0 0 25px -10px inset red;
+}
+
+input.error:focus, #message.error:focus {
+    outline: 1px solid rgb(255, 155, 0);
+    box-shadow: 0 0 25px -10px inset rgb(255, 155, 0);
+}
+
+
+input:valid~label,
+input:not(:placeholder-shown)~label {
+    color: var(--grey-2);
+    font-size: 10px;
+    letter-spacing: 1px;
+    top: 6px;
+    left: 16px;
+}
+
+
+#message {
+    background: var(--black-3);
+    color: var(--white-0);
+    padding: 16px;
+    border: none;
+    resize: none;
+    width: 100%;
+    height: 120px;
+    border-radius: 3px 3px 0 3px;
+    margin: 16px 0;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s all var(--soft-stern);
+}
+
+#message:focus::placeholder {
+    color: var(--grey-2);
+}
+
+#message::placeholder {
+    color: var(--grey-1);
+    transition: 0.5s var(--soft);
+}
+
+#send-button {
+    width: 100%;
+    background-color: var(--red);
+    color: var(--white-3);
+    font-weight: 600;
+    padding: 16px;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 32px;
+    border-radius: 3px;
+    transition: 0.5s var(--soft-stern);
+    position: relative;
+    height: 52px;
+}
+
+#send-button:hover {
+    background-color: #cf3c41;
+}
+
+#send-button span {
+    position: absolute;
+    top: 12px;
+    margin-left: 8px;
+}

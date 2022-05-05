@@ -1,0 +1,629 @@
+@import url('https://vitorsammarco.github.io/league-of-legends-css-styles/css/lolstyles.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --blue-input: #00ddff;
+    --cursor-default: url('../img/cursors/default.png') 0 2, default;
+    --cursor-hover: url('../img/cursors/hover.png') 0 2, pointer;
+    --cursor-send: url('../img/cursors/send.png') 0 2, default;
+    --cursor-close: url('../img/cursors/close.png') 0 2, default;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+body {
+    background-image: url('../img/god_king_background.jpg');
+    cursor: url('../img/cursors/default.png') 0 2, auto;
+}
+
+.seo {
+    color: transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    user-select: none;
+    pointer-events: none;
+    visibility: hidden;
+    display: none;
+}
+
+.pop-up-container {
+    position: fixed;
+    width: 101%;
+    height: 101%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+}
+
+/* Pop up style 2 */
+.pop-up {
+    font-size: 16px;
+    min-width: 345px;
+    width: 90%;
+    padding: 16px;
+    background-color: #ebebeb;
+    z-index: 2;
+    background-color: var(--hextech-black);
+    border: 2px solid;
+    border-image: linear-gradient(90deg, var(--gold-6), var(--gold-5), var(--gold-6)) 0.5;
+    box-shadow: black 0 0 3px 1px, black 0 0 3px 1px inset;
+    text-align: center;
+}
+
+.pop-up img {
+    height: 55px;
+    margin: 8px 0;
+    transform: scale(120%);
+}
+
+.pop-up h3 {
+    font-family: 'BeaufortforLOL-Bold';
+    text-align: center;
+    color: var(--gold-3);
+    margin-bottom: 8px;
+}
+
+.pop-up p {
+    color: var(--grey-1);
+    font-family: 'Spiegel';
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.pop-up button {
+    background: linear-gradient(180deg, var(--hextech-black) 30%, #01162b 100%);
+    border: 2px solid;
+    border-image: linear-gradient(45deg, var(--gold-5), var(--gold-4), var(--gold-5)) 0.5;
+    color: var(--grey-1);
+    font-family: "BeaufortforLOL-Bold";
+    font-size: 18px;
+    margin: 16px 0;
+    padding: 12px;
+    width: 90%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s var(--soft-stern);
+    cursor: var(--cursor-send);
+    user-select: none;
+}
+
+.pop-up button:hover {
+    color: var(--gold-1);
+    border-image: linear-gradient(45deg, var(--gold-4), var(--gold-3), var(--gold-4)) 0.5;
+    background: linear-gradient(180deg, var(--hextech-black) 30%, #01162b 100%);
+    cursor: var(--cursor-send);
+}
+
+
+.pop-up-container.hidden {
+    visibility: hidden;
+}
+
+.flag-container {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0 0 0 2.5%;
+}
+
+.flag-container img {
+    height: 95%;
+}
+
+.background-video {
+    position: fixed;
+    top: -25px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none;
+    user-select: none;
+}
+
+.background-video video {
+    width: 107%;
+    opacity: 1;
+}
+
+#mastery-shadow-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: -1;
+    user-select: none !important;
+    pointer-events: none !important;
+}
+
+#mastery-shadow {
+    width: 180px;
+    height: 236px;
+    background-image: url('../img/mastery-shadow.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(9px);
+    user-select: none;
+    pointer-events: none;
+}
+
+.profile {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    color: var(--gold-1);
+}
+
+.profile .title {
+    font: 18pt/14pt 'BeaufortforLOL-Bold';
+    margin-bottom: 6px;
+}
+
+.profile .desc {
+    width: 75%;
+    margin: 0 auto;
+    font: 14pt 'BeaufortforLOL-medium';
+    color: var(--grey-1);
+}
+
+.social-links {
+    width: 100%;
+    position: absolute;
+    bottom: -80%;
+}
+
+.social-links a {
+    cursor: var(--cursor-hover);
+}
+
+.social-links img {
+    pointer-events: unset;
+    height: 32px;
+    padding: 8px 6px;
+    border-radius: 8px;
+    transition: 1s var(--soft-stern);
+
+}
+
+.social-links img:hover {
+    filter: brightness(2.0);
+    padding: 4px 6px;
+}
+
+.mastery-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+}
+
+#mastery-title {
+    position: fixed;
+    bottom: 29%;
+    text-align: center;
+    line-height: unset;
+    color: var(--gold-2);
+    transition: 0.5s var(--soft);
+}
+
+.mastery-frame {
+    width: 130px;
+    height: 189px;
+    background: url(../img/mastery.png) center top no-repeat;
+    background-size: cover;
+    margin-bottom: 16px;
+    text-align: center;
+    transition: 0.3s all ease-in-out;
+    cursor: var(--cursor-hover);
+}
+
+.mastery-frame:hover {
+    background-image: url(../img/mastery-hover.png);
+}
+
+
+.mastery-frame img {
+    border-radius: 50%;
+    margin-top: 9.5%;
+    width: 81%;
+}
+
+.mastery-group-box {
+    position: fixed;
+    width: 37%;
+    height: 44%;
+    top: 18.5%;
+    background-color: var(--hextech-black);
+    border: 2px solid;
+    border-image: linear-gradient(90deg, var(--gold-6), var(--gold-5), var(--gold-6)) 0.5;
+    box-shadow: black 0 0 3px 1px, black 0 0 3px 1px inset;
+    text-align: center;
+    transition: 0.5s var(--soft-stern);
+    opacity: 1;
+}
+
+.mastery-group-box.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.mastery-group-box h5 {
+    margin: 16px 0;
+}
+
+.mastery-collection {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.mastery-collection h6 {
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+
+.mastery-collection hr {
+    height: 1px;
+    border: none;
+    background: linear-gradient(90deg, rgba(70, 55, 20, 0.45) 0%, var(--gold-6) 40%, var(--gold-6) 60%, rgba(70, 55, 20, 0.45) 100%);
+    margin-bottom: 8px;
+}
+
+#hr1,
+#hr2 {
+    background: var(--gold-6);
+    border: none;
+    height: 1.5px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -150px;
+    z-index: 0;
+}
+
+#hr2 {
+    background: var(--gold-7);
+    height: 1.2px;
+    margin-top: 10px;
+    width: 60%;
+}
+
+.mastery-primary {
+    background: url(../img/mastery-collection-1.png) center top no-repeat;
+    background-size: cover;
+    width: 134px;
+    height: 180px;
+}
+
+.mastery-primary img {
+    border-radius: 50%;
+    width: 113px;
+    margin-top: 11px;
+    vertical-align: middle;
+}
+
+.mastery-secondary {
+    background: url('../img/mastery-collection-2.png') center top no-repeat;
+    background-size: cover;
+    width: 96px;
+    height: 150px;
+}
+
+.mastery-collection p {
+    color: var(--grey-1);
+    font-family: 'Spiegel';
+    width: 100%;
+}
+
+.mastery-icon {
+    height: 12px;
+    vertical-align: baseline;
+}
+
+.mastery-secondary img {
+    border-radius: 50%;
+    width: 79px;
+    height: 79px;
+    margin-top: 9.2%;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#chat-button {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    padding: 4px;
+    background: linear-gradient(0deg, var(--grey-4) 0%, var(--grey-4) 100%);
+    border: 2px solid;
+    border-image: linear-gradient(45deg, var(--gold-5), var(--gold-4), var(--gold-5)) 0.5;
+    z-index: 1;
+    transition: 0.3s var(--soft);
+    cursor: var(--cursor-hover) !important;
+}
+
+#chat-button img {
+    cursor: var(--cursor-hover) !important;
+    user-select: none;
+    pointer-events: none;
+}
+
+span.check {
+    color: rgb(58, 95, 58);
+    font-weight: bolder;
+}
+
+
+#chat-button:hover {
+    border-image: linear-gradient(45deg, var(--gold-4), var(--gold-3), var(--gold-4)) 0.5;
+    background: linear-gradient(180deg, var(--grey-4) 30%, #433f33 100%);
+}
+
+.chat-windows {
+    width: 300px;
+    height: 320px;
+    background: rgba(1, 10, 19, 0.9);
+    position: absolute;
+    bottom: 0;
+    right: 45px;
+    border-radius: 2px;
+    opacity: 1;
+    transition: 0.6s all;
+}
+
+.chat-windows.hidden {
+    transform: translateY(100%);
+    opacity: 0.8;
+}
+
+.chat-header {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid var(--gold-4);
+}
+
+.chat-header img {
+    height: 65%;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 2.5px;
+}
+
+.input-box {
+    position: relative;
+    height: 100%;
+    width: calc(100% - 87px)
+}
+
+input::placeholder {
+    color: transparent;
+    user-select: none;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    color: var(--gold-1);
+    border: none;
+    background: none;
+    font: 16px 'Spiegel-SemiBold';
+    line-height: 45px;
+    letter-spacing: 0.5px;
+    padding: 0 6px;
+    transition: 1s all var(--soft);
+    padding-top: 0px;
+}
+
+label {
+    position: absolute;
+    color: var(--grey-1);
+    font: 16px 'Spiegel-Bold';
+    letter-spacing: 0.5px;
+    top: 9px;
+    left: 6px;
+    user-select: none;
+    transition: 0.5s all var(--soft-stern);
+    cursor: text;
+}
+
+input:focus~label {
+    color: var(--gold-1);
+    font-size: 10px;
+    letter-spacing: 1px;
+    top: 0;
+    left: 5px;
+}
+
+input:focus {
+    box-shadow: inset 0 -40px 35px -50px var(--blue-input);
+}
+
+input:valid~label,
+input:not(:placeholder-shown)~label {
+    color: var(--gold-2);
+    font-size: 10px;
+    letter-spacing: 1px;
+    top: 0;
+    left: 5px;
+}
+
+input.error {
+    box-shadow: inset 0 -40px 35px -50px red;
+}
+
+input.error~label {
+    color: rgb(255, 163, 163);
+}
+
+input.error:focus {
+    box-shadow: inset 0 -40px 35px -50px rgb(255, 150, 0);
+}
+
+input.error:focus~label {
+    color: var(--gold-2);
+}
+
+.chat-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    height: 64%;
+    padding-bottom: 16px;
+    position: relative;
+}
+
+.chat-message textarea {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    resize: none;
+    background-color: var(--gold-5);
+    border-radius: 6px 0px 6px 6px;
+    border: none;
+    font-family: 'Spiegel-Regular';
+    color: var(--gold-1);
+    font-size: 14px;
+    padding: 8px 10px;
+    transition: 1.5s all var(--soft-stern);
+}
+
+.chat-message:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 08px;
+    top: 0px;
+    bottom: auto;
+    border: 15px solid;
+    border-color: var(--gold-5) transparent transparent transparent;
+}
+
+/* .chat-message textarea:focus {
+    box-shadow: 0 0 0px 1px var(--gold-2);
+} */
+
+textarea:focus~.chat-message::before {
+    box-shadow: 0 0 0px 1px red !important;
+    border-color: red transparent transparent transparent;
+}
+
+.chat-message.error textarea {
+    box-shadow: inset 0 -30px 50px -30px #9c1010;
+    background: #783b28;
+}
+
+.chat-message.error::before {
+    border-color: #783b28 transparent transparent transparent;
+}
+
+.chat-message.error textarea:focus {
+    background-color: #925b2d;
+    box-shadow: none;
+}
+
+
+textarea::placeholder {
+    color: var(--gold-2);
+    font-family: 'Spiegel-Regular';
+    transition: all 1s var(--soft-stern);
+}
+
+textarea:focus::placeholder {
+    color: var(--gold-1);
+}
+
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #55411e;
+    border-radius: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #886831;
+}
+
+#send-button {
+    background: linear-gradient(0deg, var(--grey-5) 0%, var(--grey-5) 100%);
+    border: 2px solid;
+    border-image: linear-gradient(45deg, var(--gold-5), var(--gold-4), var(--gold-5)) 0.5;
+    color: var(--grey-1);
+    width: 100%;
+    height: 45px;
+    bottom: 1px;
+    position: absolute;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "BeaufortforLOL-Bold";
+    letter-spacing: 1px;
+    transition: 0.5s var(--soft-stern);
+    cursor: var(--cursor-send);
+}
+
+#send-button:hover {
+    color: var(--gold-1);
+    border-image: linear-gradient(45deg, var(--gold-4), var(--gold-3), var(--gold-4)) 0.5;
+    background: linear-gradient(180deg, var(--hextech-black) 30%, #01162b 100%);
+    cursor: var(--cursor-send);
+}
+
+#close-button {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    right: 0;
+    background: none;
+    border: none;
+    font-family: 'Spiegel-Heavy';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: var(--cursor-close);
+}
+
+.minimize-icon {
+    width: 12px;
+    height: 3px;
+    background: var(--gold-2);
+}

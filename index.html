@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>vitusmmrc</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <meta name="description"
+        content="vitusmmrc - Designer | Devopler - League of Legends Custom Skin Maker, Front-End Dev, UX UI, 3D modeling, Photography.">
+</head>
+
+<body>
+    <div class="seo">
+        <h1>vitusmmrc, Vitor Sammarco, vitu sammarco, vitor smmrc, League of Legends, Custom Skin, Skin Maker, 3D,
+            modelagem 3D, Design, Designer, UX UI, expêriencia do usuário, Front-end, front end, Dev, Devopler,
+            Desenvolvedor Web, Discord, Tik Tok, @vitusmmrc, vitu.smmrc, twitter, youtube, github, profissionais,
+            profissional</h1>
+
+        <p>vitusmmrc, Vitor Sammarco, vitu sammarco, vitor smmrc, League of Legends, Custom Skin, Skin Maker, 3D,
+            modelagem 3D, Design, Designer, UX UI, expêriencia do usuário, Front-end, front end, Dev, Devopler,
+            Desenvolvedor Web, Discord, Tik Tok, @vitusmmrc, vitu.smmrc, twitter, youtube, github, profissionais,
+            profissional</p>
+
+        <p>SE VC TÁ LENDO ISSO ME CONTRATA!</p>
+    </div>
+
+    <div class="pop-up-container hidden" id="pop-up-container">
+        <div class="pop-up " id="pop-up">
+            <img src="./img/icons/mobile.svg">
+            <h3>Olá!</h3>
+            <p>Parece que você está usando um celular, acesse a versão mobile para obter uma expêriencia melhor</p>
+            <button onclick='location.href="./mobile/index.html"'> Acessar versão mobile</button>
+        </div>
+    </div>
+
+    <div class="mastery-container">
+
+        <h5 id="mastery-title">Pontuação De <br> Maestria</h5>
+
+        <div class="mastery-frame" id="mastery">
+            <img src="./img/garen.webp">
+        </div>
+
+        <div id="mastery-popup" class="mastery-group-box hidden">
+            <h5>Maestria de Campeão mais alta</h5>
+
+            <div class="mastery-collection">
+
+                <div id="first-mastery">
+                    <div class="mastery-secondary">
+                        <img src="./img/sett.webp">
+                    </div>
+
+                    <h6>Sett</h6>
+                    <hr>
+
+                    <p>
+                        <img src="./img/icons/mastery.svg" class="mastery-icon">
+                        120.000
+                        pts
+                    </p>
+
+                </div>
+
+                <div id="second-mastery">
+                    <div class="mastery-primary">
+                        <img src="./img/garen.webp">
+                    </div>
+
+                    <h6>Garen</h6>
+                    <hr>
+
+                    <p>
+                        <img src="./img/icons/mastery.svg" class="mastery-icon">
+                        700.000
+                        pts
+                    </p>
+                </div>
+
+                <div id="third-mastery">
+                    <div class="mastery-secondary">
+                        <img src="./img/shen.webp">
+                    </div>
+
+                    <h6>Shen</h6>
+                    <hr>
+
+                    <p>
+                        <img src="./img/icons/mastery.svg" class="mastery-icon">
+                        80.000
+                        pts
+                    </p>
+                </div>
+
+            </div>
+
+            <hr id="hr1">
+            <hr id="hr2">
+
+        </div>
+
+    </div>
+
+    <div class="flag-container">
+        <img src="img/flag.png">
+
+        <div class="profile">
+            <p class="title" id="title">Designer | Developer</p>
+            <p class="desc">League of Legends Custom Skin Maker, Front-End Dev, UX UI, 3D Modeling, Photography. </p>
+
+            <div class="social-links">
+                <a target="_blank" href="https://twitter.com/vitusmmrc"><img src="./img/icons/twitter.svg"
+                        alt="twitter link"></a>
+
+                <a target="_blank" href="https://www.tiktok.com/@vitusmmrc"><img src="./img/icons/tiktok.svg"
+                        alt="tiktok link"></a>
+
+                <a target="_blank" href="https://www.youtube.com/channel/UCH32c2RuEm3YaD0oAs0TEjQ"><img
+                        src="./img/icons/youtube.svg" alt="youtube link"></a>
+
+                <a target="_blank" href="https://github.com/vitorsammarco"><img src="./img/icons/github.svg"
+                        alt="github link"></a>
+
+                <a target="_blank" href="https://discord.com/channels/@me/969261618653458472"><img
+                        src="./img/icons/discord.svg" alt="discord link"></a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="chat-container">
+
+        <div id="chat-button">
+            <img src="./img/icons/chat.svg">
+        </div>
+
+        <div id="chat-windows" class="chat-windows hidden">
+
+            <div class="chat-header">
+
+                <button id="close-button" onclick="toggleChat()">
+                    <div class="minimize-icon"></div>
+                </button>
+                <img src="./img/rose.png">
+
+                <div class="input-box">
+                    <input id="name" name="name" type="text" spellcheck="false" required placeholder="Nome">
+                    <label for="name">Nome</label>
+                </div>
+
+            </div>
+
+            <div class="chat-message">
+                <textarea id="message" spellcheck="false"
+                    placeholder="Escreva sua mensagem, sugestão ou pedido..."></textarea>
+            </div>
+
+            <button id="send-button" onclick="sendMsg()">Enviar</button>
+
+        </div>
+    </div>
+
+    <div id="mastery-shadow-container">
+        <div id="mastery-shadow"></div>
+    </div>
+
+
+    <div class="background-video">
+        <video autoplay muted loop>
+            <source src="img/background-loop.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
