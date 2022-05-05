@@ -92,7 +92,7 @@ header#menu h2 {
     z-index: 1;
     top: 266px;
     width: 100%;
-    box-shadow: 0 -50px 60px 20px var(--black-2);
+    box-shadow: 0 -56px 40px 20px var(--black-2);
 }
 
 #main-banner video {
