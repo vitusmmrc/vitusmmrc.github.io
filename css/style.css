@@ -191,6 +191,7 @@ body {
     width: 100%;
     position: absolute;
     bottom: -80%;
+    user-select: none;
 }
 
 .social-links a {
@@ -561,6 +562,7 @@ textarea::placeholder {
     color: var(--gold-2);
     font-family: 'Spiegel-Regular';
     transition: all 1s var(--soft-stern);
+    user-select: none;
 }
 
 textarea:focus::placeholder {
@@ -599,6 +601,7 @@ textarea::-webkit-scrollbar-thumb:hover {
     letter-spacing: 1px;
     transition: 0.5s var(--soft-stern);
     cursor: var(--cursor-send);
+    user-select: none;
 }
 
 #send-button:hover {
